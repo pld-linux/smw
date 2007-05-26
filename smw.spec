@@ -1,11 +1,9 @@
 #
-# TODO: 
-# - polish desc.
-#
 # remember sources are here : svn://svn.72dpiarmy.com/smw
 # remember to "touch" every file in sources before archive in file (year 1970)
 #
-Summary:	Super Mario War is a Super Mario multiplayer game.
+Summary:	Super Mario War - a Super Mario multiplayer game
+Summary(pl.UTF-8):	Super Mario War - gra Super Mario dla wielu graczy
 Name:		smw
 Version:	1.7
 Release:	1
@@ -27,7 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Super Mario War is a Super Mario multiplayer game.
 
-#% description -l pl.UTF-8
+%description -l pl.UTF-8
+Super Mario War to gra Super Mario dla wielu graczy.
 
 %prep
 %setup -q -n %{name}
@@ -46,7 +45,7 @@ install %{SOURCE3} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE4} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 export DESTDIR=$RPM_BUILD_ROOT
-make install
+%{__make} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
