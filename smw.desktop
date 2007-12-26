@@ -2,9 +2,8 @@
 Name=Super Mario War
 Comment=
 Comment[pl]=
-Icon=smw.png
+Icon=smw
 Exec=smw
 Terminal=false
 Type=Application
 Categories=Game;ArcadeGame;
-Encoding=UTF-8

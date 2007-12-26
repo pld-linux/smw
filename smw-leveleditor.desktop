@@ -2,9 +2,8 @@
 Name=Super Mario War - Level Editor
 Comment=
 Comment[pl]=
-Icon=smw-leveleditor.png
+Icon=smw-leveleditor
 Exec=smw-leveledit
 Terminal=false
 Type=Application
 Categories=Game;ArcadeGame;
-Encoding=UTF-8
