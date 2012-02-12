@@ -6,7 +6,7 @@ Summary:	Super Mario War - a Super Mario multiplayer game
 Summary(pl.UTF-8):	Super Mario War - gra Super Mario dla wielu graczy
 Name:		smw
 Version:	1.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://starowa.one.pl/~uzi/pld/%{name}-%{version}.tar.gz
