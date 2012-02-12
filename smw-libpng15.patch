@@ -1,0 +1,21 @@
+--- smw/_src/savepng.cpp~	2007-05-26 11:37:16.000000000 +0200
++++ smw/_src/savepng.cpp	2012-02-12 18:07:52.270944669 +0100
+@@ -94,7 +94,7 @@
+ 	}
+ 	
+ 	/* Set error handling. */
+-	if (setjmp(png_ptr->jmpbuf))
++	if (setjmp(png_jmpbuf(png_ptr)))
+ 	{
+ 		/* If we get here, we had a problem reading the file */
+ 		IMG_SetError("Error writing the PNG file");
+@@ -143,9 +143,6 @@
+         if (row_pointers)
+ 			delete [] row_pointers;
+ 	
+-	if (info_ptr->palette)
+-		delete info_ptr->palette;
+-	
+ 	png_destroy_write_struct(&png_ptr, (png_infopp)NULL);
+ 	
+ 	
